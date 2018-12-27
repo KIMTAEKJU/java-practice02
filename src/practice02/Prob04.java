@@ -1,8 +1,10 @@
 package practice02;
 
-public class Prob04 {
+public class Prob04 
+{
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		char[] c1 = reverse( "Hello World" );
 		printCharArray( c1 );
 		
@@ -12,9 +14,21 @@ public class Prob04 {
 	
 	public static char[] reverse(String str) {
 		/* 코드를 완성합니다 */
+		
+		char[] charArr = new char[str.length()];
+		StringBuilder strBuilder = new StringBuilder(str).reverse();
+		
+		for (int i = 0; i < str.length(); i++)
+			charArr[i] = strBuilder.charAt(i);
+		
+		return charArr;
 	}
 
 	public static void printCharArray(char[] array){
 		/* 코드를 완성합니다 */
+		
+		for (int i = 0; i < array.length; i++)
+			System.out.print(array[i]);
+		System.out.println();
 	}
 }
